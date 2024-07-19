@@ -11,5 +11,5 @@ import com.example.demo.model.Pacchetto;
 public interface PacchettoRepository extends JpaRepository<Pacchetto, Long> {
 	
 	 List<Pacchetto> findByNameAndDescrizione(String name,String password);
-
+	 List<Pacchetto> findByDestinazione_id(Long id);
 }

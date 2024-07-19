@@ -45,6 +45,11 @@ public class PacchettoController {
 			return new ResponseEntity<Pacchetto>(HttpStatus.NOT_FOUND);
 		}
 	}
+	
+	@GetMapping("/destinazione/{id}")
+	public List<Pacchetto> GetPacchettoDestinazione(@PathVariable Long id){
+		return pacchettoRepository.findByDestinazione_id(id);	
+	}
 
 	@PostMapping
 	public ResponseEntity<Pacchetto> createPacchetto(@Valid @RequestBody Pacchetto pacchetto) {
