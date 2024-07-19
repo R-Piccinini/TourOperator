@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +20,7 @@ public class Destinazione {
 	private String name;
 
 	@NotBlank(message = "Descrizione richiesta")
+	@Column(columnDefinition = "TEXT")
 	private String descrizione;
 
 	@OneToMany(mappedBy = "destinazione")
