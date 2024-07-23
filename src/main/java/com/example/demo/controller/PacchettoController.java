@@ -44,6 +44,7 @@ public class PacchettoController {
 	UserService userService;
 
 	@GetMapping
+	//fede
 	public List<Pacchetto> getAllPacchetto(@RequestHeader("Authorization") String token) {
 		Token authToken = tokenService.findByToken(token);
 		if (authToken != null) {
