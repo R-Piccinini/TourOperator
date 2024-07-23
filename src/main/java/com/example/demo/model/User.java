@@ -38,6 +38,9 @@ public class User {
 	@Past(message = "Data non Valida")
 	private Date dataNascita;
 
+	@NotBlank(message = "Ruolo richiesto")
+	private String role;
+
 	@ManyToOne
 	@JoinColumn(name = "pacchetto_id")
 	private Pacchetto pacchetto;
@@ -104,6 +107,14 @@ public class User {
 
 	public void setDataNascita(Date dataNascita) {
 		this.dataNascita = dataNascita;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 	public Pacchetto getPacchetto() {
